@@ -1,0 +1,39 @@
+<div class="logout-container">
+  <button class="btn btn-danger" (click)="logout()">Logout</button>
+</div>
+
+<div class="container mt-4">
+    <h1 class="text-center">FarmMotion Visualizer</h1>
+    <hr>
+  
+    <!-- Farm Actions -->
+    <div class="mb-4">
+      <h2>Farm Actions</h2>
+      <div class="btn-group">
+        <a routerLink="/farms" class="btn btn-primary">Farm List</a>
+        <a routerLink="/farms/create" class="btn btn-success">Create Farm</a>
+        <a routerLink="/farms/{:id}" class="btn btn-info">Farm Detail</a>
+        <a routerLink="/upload-file" class="btn btn-primary">Farm File Upload</a>
+
+      </div>
+    </div>
+  
+    <!-- Movement Actions -->
+    <div>
+      <h2>Movement Actions</h2>
+      <div class="btn-group">
+        <a routerLink="/movements" class="btn btn-primary">Movement List</a>
+        <a routerLink="/movements/create" class="btn btn-success">Create Movement</a>
+        <a routerLink="/movements/:id" class="btn btn-info">Movement Detail</a>
+        <a routerLink="/upload-movement" class="btn btn-primary">Movement File Upload</a>
+       
+      </div>
+<br><br>
+       <!-- Assuming this is part of your home page or a relevant component -->
+<div>
+ 
+</div>
+
+
+   
+  
