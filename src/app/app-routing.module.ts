@@ -13,6 +13,7 @@ import { UploadFileComponent } from './upload/upload-file/upload-file.component'
 import { UploadMovmentComponent } from './upload/upload-movment/upload-movment.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { AnimalMovementVisualizationComponent } from './animal-movement-visualization/animal-movement-visualization.component';
 
 
 
@@ -34,7 +35,8 @@ const routes: Routes = [
   { path: 'movements/create', component: MovementCreateComponent },
   { path: 'movements/:id', component: MovementDetailComponent },
   { path: 'movements/update/:id', component: MovementUpdateComponent },
-
+  { path: 'movements/update/:id', component: MovementUpdateComponent },
+  { path: 'visualize', component: AnimalMovementVisualizationComponent },
 
   { path: 'upload-file', component: UploadFileComponent },
   {path:'upload-movement',component:UploadMovmentComponent}

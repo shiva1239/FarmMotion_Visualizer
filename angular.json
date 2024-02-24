@@ -26,9 +26,14 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "node_modules/leaflet/dist/leaflet.css",
+              "node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/leaflet/dist/leaflet.js",
+              "node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -61,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angulardemo:build:production"
+              "buildTarget": "angulardemo:build:production"
             },
             "development": {
-              "browserTarget": "angulardemo:build:development"
+              "buildTarget": "angulardemo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angulardemo:build"
+            "buildTarget": "angulardemo:build"
           }
         },
         "test": {
@@ -88,10 +93,16 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/leaflet/dist/leaflet.css",
+              "node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.css",
+              "node_modules/leaflet-animate/leaflet.animated.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/leaflet/dist/leaflet.js",
+              "node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.js",
+              "node_modules/leaflet-animate/leaflet.animated.js"
+            ]
           }
         }
       }

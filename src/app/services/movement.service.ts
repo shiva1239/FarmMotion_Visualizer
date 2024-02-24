@@ -31,4 +31,13 @@ export class MovementService {
   deleteMovement(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/delete/${id}`);
   }
+
+  getLocationDataForAllMovements(): Observable<string[][]> {
+    return this.http.get<string[][]>(`${this.apiUrl}/location-data`);
+  }
+
+  getCoordinatesForAllMovements(): Observable<number[][]> {
+    return this.http.get<number[][]>(`${this.apiUrl}/coordinates`);
+  }
+
 }
