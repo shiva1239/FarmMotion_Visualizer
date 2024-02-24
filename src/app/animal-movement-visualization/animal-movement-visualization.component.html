@@ -1,9 +1,19 @@
 <!-- animal-movement-visualization.component.html -->
+<body style="background-color:black">
+<a href="/home" class="btn btn-primary mt-3 ml-2">Home</a>
+<div class="container mt-5 dark-background">
+    <h2 class="text-light">Animal Movement Visualization</h2>
 
-<div class="container mt-5">
-    <h2>Animal Movement Visualization</h2>
-  
+    <!-- Button Row -->
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Restart Animation Button (positioned at the top) -->
+            <button class="btn btn-primary mt-3" (click)="restartAnimation()">Restart Animation</button>
+        </div>
+        
+    </div>
+    
     <!-- ngx-leaflet map container -->
-    <div id="map" style="height: 500px;"></div>
-  </div>
-  
+    <div id="map" style="height: 100vh; width: 100%;"></div>
+</div>
+</body>

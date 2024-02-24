@@ -84,11 +84,16 @@ export class AnimalMovementVisualizationComponent implements OnInit {
   }
 
   private drawMovementLine(origin: [number, number], destination: [number, number], color: string): void {
-    const polyline = L.polyline([origin, destination], {
+    const line = L.polyline([origin, destination], {
       color: color,
-      dashArray: '5, 10',
+      dashArray: '5, 10', // Adjust the weight as needed
     }).addTo(this.map);
+  
+    // Optionally, fit the map bounds to the line
+    this.map.fitBounds(line.getBounds());
   }
+  
+  
 
   private animatePig(origin: [number, number], destination: [number, number], color: string): void {
     const pigIcon = L.icon({
@@ -102,7 +107,7 @@ export class AnimalMovementVisualizationComponent implements OnInit {
     const pigMarker = L.marker(origin, { icon: pigIcon }).addTo(this.map);
     this.pigMarkers.push(pigMarker);
 
-    const steps = 1000; // Number of steps for animation
+    const steps = 5000; // Number of steps for animation
     const latStep = (destination[0] - origin[0]) / steps;
     const lonStep = (destination[1] - origin[1]) / steps;
 
@@ -110,7 +115,7 @@ export class AnimalMovementVisualizationComponent implements OnInit {
   }
 
   private animateStep(marker: L.Marker, origin: [number, number], destination: [number, number], latStep: number, lonStep: number, color: string, step: number): void {
-    if (step <= 1000) {
+    if (step <= 5000) {
       const lat = origin[0] + step * latStep;
       const lon = origin[1] + step * lonStep;
       marker.setLatLng([lat, lon]);
@@ -138,5 +143,10 @@ export class AnimalMovementVisualizationComponent implements OnInit {
       color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
+  }
+
+  public restartAnimation(): void {
+    // Reload the page
+    window.location.reload();
   }
 }
