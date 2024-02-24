@@ -1,0 +1,15 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .wrapper {
+    background-image: url('/assets/login.png'); /* Use absolute path from the src folder */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }

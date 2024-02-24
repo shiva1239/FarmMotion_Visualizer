@@ -1,43 +1,41 @@
-<div class="logout-container">
-  <button class="btn btn-danger" (click)="logout()">Logout</button>
-</div>
+<!-- Your existing head section with stylesheets and other meta tags -->
 
-<div class="container mt-4">
-    <h1 class="text-center">FarmMotion Visualizer</h1>
-    <hr>
+<body>
+  <div class="wrapper">
+    <div class="logout-container">
+      <button class="btn btn-danger" (click)="logout()">Logout</button>
+    </div>
+
+    <div class="background-container container mt-4 text-center">
+      <!-- Adjust the image source and alt text as needed -->
+
+      <h1 class="display-4">FarmMotion Visualizer</h1>
+      <hr class="my-4">
   
-    <!-- Farm Actions -->
-    <div class="mb-4">
-      <h2>Farm Actions</h2>
+      <!-- Farm Actions -->
+      <div class="mb-4 btn-group">
+        <h2 class="h4 section-heading">Farm Actions</h2>
+        <div class="btn-group">
+          <a routerLink="/farms" class="btn btn-primary">Farm List</a>
+          <a routerLink="/farms/create" class="btn btn-success">Create Farm</a>
+          <a routerLink="/upload-file" class="btn btn-primary">Farm File Upload</a>
+        </div>
+      </div>
+  
+      <!-- Movement Actions -->
       <div class="btn-group">
-        <a routerLink="/farms" class="btn btn-primary">Farm List</a>
-        <a routerLink="/farms/create" class="btn btn-success">Create Farm</a>
-        <a routerLink="/farms/{:id}" class="btn btn-info">Farm Detail</a>
-        <a routerLink="/upload-file" class="btn btn-primary">Farm File Upload</a>
+        <h2 class="h4 section-heading">Movement Actions</h2>
+        <div class="btn-group">
+          <a routerLink="/movements" class="btn btn-primary">Movement List</a>
+          <a routerLink="/movements/create" class="btn btn-success">Create Movement</a>
+          <a routerLink="/upload-movement" class="btn btn-primary">Movement File Upload</a>
+        </div>
+      </div>
 
+      <!-- Visualize Animal Movements Button -->
+      <div>
+        <a routerLink="/visualize" class="btn btn-primary btn-visualize btn-lg">Visualize Animal Movements</a>
       </div>
     </div>
-  
-    <!-- Movement Actions -->
-    <div>
-      <h2>Movement Actions</h2>
-      <div class="btn-group">
-        <a routerLink="/movements" class="btn btn-primary">Movement List</a>
-        <a routerLink="/movements/create" class="btn btn-success">Create Movement</a>
-        <a routerLink="/movements/:id" class="btn btn-info">Movement Detail</a>
-        <a routerLink="/upload-movement" class="btn btn-primary">Movement File Upload</a>
-       
-      </div>
-<br><br>
-       <!-- Assuming this is part of your home page or a relevant component -->
-       <div>
-        <a routerLink="/visualize" class="btn btn-primary">Visualize Animal Movements</a>
-
-       </div>
-<div>
- 
-</div>
-
-
-   
-  
+  </div>
+</body>
