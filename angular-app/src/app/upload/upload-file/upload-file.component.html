@@ -1,0 +1,26 @@
+<body>
+  <div class="wrapper">
+<div>
+  <h2>Upload File</h2>
+
+  <input type="file" (change)="onFileSelected($event)" />
+
+  <button (click)="onUpload()">Upload</button>
+
+  <div *ngIf="successMessage; else errorSection">
+    <p style="color: green;">{{ successMessage }}</p>
+  </div>
+
+  <ng-template #errorSection>
+    <div *ngIf="errorMessage">
+      <p style="color: red;">{{ errorMessage }}</p>
+    </div>
+  </ng-template>
+
+  <br>
+  <br>
+  <button class="btn btn-primary mb-2" [routerLink]="['/home']">Home</button>
+
+</div>
+</div>
+</body>

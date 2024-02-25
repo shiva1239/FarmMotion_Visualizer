@@ -1,0 +1,37 @@
+<!-- farm-list.component.html -->
+<body>
+  <div class="wrapper">
+<div class="container">
+    <h2>Farm List</h2>
+    <button routerLink="/home" class="btn btn-primary mb-2">Home</button> <!-- Home Button -->
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Premise ID</th>
+          <th>Total Animals</th>
+          <th>Actions</th> <!-- Add Actions column -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let farm of farms">
+          <td>{{ farm.id }}</td>
+          <td>{{ farm.premiseId }}</td>
+          <td>{{ farm.totalAnimal }}</td>
+          <td>
+            <!-- Edit button, navigate to farm update page with farm id -->
+            <button class="btn btn-warning" [routerLink]="['/farms/update', farm.id]">Edit</button>
+  
+            <!-- Delete button, confirm before deleting and then call deleteFarm method -->
+            <button class="btn btn-danger" (click)="confirmDelete(farm.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Create New Farm Button, navigate to farm create page -->
+    <button routerLink="/farms/create" class="btn btn-success mt-2">Create New Farm</button>
+  </div>
+  <body>
+    <div class="wrapper"> 

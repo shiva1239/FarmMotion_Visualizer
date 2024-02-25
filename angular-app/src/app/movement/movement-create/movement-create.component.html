@@ -1,0 +1,139 @@
+<!-- movement-create.component.html -->
+<body>
+    <div class="wrapper">
+      <div class="container">
+        <h2>Create Movement</h2>
+        <form (submit)="createMovement()" #createForm="ngForm" class="movement-form">
+          <!-- Account/Company -->
+          <div class="form-group">
+            <label for="accountCompany">Account/Company:</label>
+            <input type="text" class="form-control" id="accountCompany" [(ngModel)]="newMovement.accountCompany" name="accountCompany" required>
+          </div>
+  
+          <!-- New Movement Reason -->
+          <div class="form-group">
+            <label for="newMovementReason">New Movement Reason:</label>
+            <input type="text" class="form-control" id="newMovementReason" [(ngModel)]="newMovement.newMovementReason" name="newMovementReason" required>
+          </div>
+  
+          <!-- New Species -->
+          <div class="form-group">
+            <label for="newSpecies">New Species:</label>
+            <input type="text" class="form-control" id="newSpecies" [(ngModel)]="newMovement.newSpecies" name="newSpecies" required>
+          </div>
+  
+          <!-- New Origin Address -->
+          <div class="form-group">
+            <label for="newOriginAddress">New Origin Address:</label>
+            <input type="text" class="form-control" id="newOriginAddress" [(ngModel)]="newMovement.newOriginAddress" name="newOriginAddress" required>
+          </div>
+  
+          <!-- New Origin City -->
+          <div class="form-group">
+            <label for="newOriginCity">New Origin City:</label>
+            <input type="text" class="form-control" id="newOriginCity" [(ngModel)]="newMovement.newOriginCity" name="newOriginCity" required>
+          </div>
+  
+          <!-- New Origin Name -->
+          <div class="form-group">
+            <label for="newOriginName">New Origin Name:</label>
+            <input type="text" class="form-control" id="newOriginName" [(ngModel)]="newMovement.newOriginName" name="newOriginName" required>
+          </div>
+  
+          <!-- New Origin Postal Code -->
+          <div class="form-group">
+            <label for="newOriginPostalCode">New Origin Postal Code:</label>
+            <input type="text" class="form-control" id="newOriginPostalCode" [(ngModel)]="newMovement.newOriginPostalCode" name="newOriginPostalCode" required>
+          </div>
+  
+          <!-- New Origin Premise ID -->
+          <div class="form-group">
+            <label for="newOriginPremId">New Origin Premise ID:</label>
+            <input type="text" class="form-control" id="newOriginPremId" [(ngModel)]="newMovement.newOriginPremId" name="newOriginPremId" required>
+          </div>
+  
+          <!-- New Origin State -->
+          <div class="form-group">
+            <label for="newOriginState">New Origin State:</label>
+            <input type="text" class="form-control" id="newOriginState" [(ngModel)]="newMovement.newOriginState" name="newOriginState" required>
+          </div>
+  
+          <!-- New Destination Address -->
+          <div class="form-group">
+            <label for="newDestinationAddress">New Destination Address:</label>
+            <input type="text" class="form-control" id="newDestinationAddress" [(ngModel)]="newMovement.newDestinationAddress" name="newDestinationAddress" required>
+          </div>
+  
+          <!-- New Destination City -->
+          <div class="form-group">
+            <label for="newDestinationCity">New Destination City:</label>
+            <input type="text" class="form-control" id="newDestinationCity" [(ngModel)]="newMovement.newDestinationCity" name="newDestinationCity" required>
+          </div>
+  
+          <!-- New Destination Name -->
+          <div class="form-group">
+            <label for="newDestinationName">New Destination Name:</label>
+            <input type="text" class="form-control" id="newDestinationName" [(ngModel)]="newMovement.newDestinationName" name="newDestinationName" required>
+          </div>
+  
+          <!-- New Destination Postal Code -->
+          <div class="form-group">
+            <label for="newDestinationPostalCode">New Destination Postal Code:</label>
+            <input type="text" class="form-control" id="newDestinationPostalCode" [(ngModel)]="newMovement.newDestinationPostalCode" name="newDestinationPostalCode" required>
+          </div>
+  
+          <!-- New Destination Premise ID -->
+          <div class="form-group">
+            <label for="newDestinationPremId">New Destination Premise ID:</label>
+            <input type="text" class="form-control" id="newDestinationPremId" [(ngModel)]="newMovement.newDestinationPremId" name="newDestinationPremId" required>
+          </div>
+  
+          <!-- New Destination State -->
+          <div class="form-group">
+            <label for="newDestinationState">New Destination State:</label>
+            <input type="text" class="form-control" id="newDestinationState" [(ngModel)]="newMovement.newDestinationState" name="newDestinationState" required>
+          </div>
+  
+          <!-- Origin Latitude -->
+          <div class="form-group">
+            <label for="originLat">Origin Latitude:</label>
+            <input type="number" class="form-control" id="originLat" [(ngModel)]="newMovement.originLat" name="originLat" required>
+          </div>
+  
+          <!-- Origin Longitude -->
+          <div class="form-group">
+            <label for="originLon">Origin Longitude:</label>
+            <input type="number" class="form-control" id="originLon" [(ngModel)]="newMovement.originLon" name="originLon" required>
+          </div>
+  
+          <!-- Destination Latitude -->
+          <div class="form-group">
+            <label for="destinationLat">Destination Latitude:</label>
+            <input type="number" class="form-control" id="destinationLat" [(ngModel)]="newMovement.destinationLat" name="destinationLat" required>
+          </div>
+  
+          <!-- Destination Longitude -->
+          <div class="form-group">
+            <label for="destinationLon">Destination Longitude:</label>
+            <input type="number" class="form-control" id="destinationLon" [(ngModel)]="newMovement.destinationLon" name="destinationLon" required>
+          </div>
+  
+          <!-- New Num Items Moved -->
+          <div class="form-group">
+            <label for="newNumItemsMoved">New Num Items Moved:</label>
+            <input type="number" class="form-control" id="newNumItemsMoved" [(ngModel)]="newMovement.newNumItemsMoved" name="newNumItemsMoved" required>
+          </div>
+  
+          <!-- New Shipments Start Date -->
+          <div class="form-group">
+            <label for="newShipmentsStartDate">New Shipments Start Date:</label>
+            <input type="text" class="form-control" id="newShipmentsStartDate" [(ngModel)]="newMovement.newShipmentsStartDate" name="newShipmentsStartDate" required>
+          </div>
+  
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-primary">Create Movement</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  

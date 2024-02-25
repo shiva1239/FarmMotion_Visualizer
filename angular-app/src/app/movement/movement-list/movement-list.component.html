@@ -1,0 +1,77 @@
+<!-- movement-list.component.html -->
+<body>
+    <div class="wrapper">
+<div class="container">
+    <h2>Movement List</h2>
+    
+    <!-- Home button at the top -->
+    <button class="btn btn-primary mb-2" [routerLink]="['/home']">Home</button>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Account/Company</th>
+                <th>New Movement Reason</th>
+                <th>New Species</th>
+                <th>New Origin Address</th>
+                <th>New Origin City</th>
+                <th>New Origin Name</th>
+                <th>New Origin Postal Code</th>
+                <th>New Origin Prem ID</th>
+                <th>New Origin State</th>
+                <th>New Destination Address</th>
+                <th>New Destination City</th>
+                <th>New Destination Name</th>
+                <th>New Destination Postal Code</th>
+                <th>New Destination Prem ID</th>
+                <th>New Destination State</th>
+                <th>Origin Lat</th>
+                <th>Origin Lon</th>
+                <th>Destination Lat</th>
+                <th>Destination Lon</th>
+                <th>New Num Items Moved</th>
+                <th>New Shipments Start Date</th>
+                <th>Actions</th> <!-- Add Actions column -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let movement of movements">
+                <td>{{ movement.id }}</td>
+                <td>{{ movement.accountCompany }}</td>
+                <td>{{ movement.newMovementReason }}</td>
+                <td>{{ movement.newSpecies }}</td>
+                <td>{{ movement.newOriginAddress }}</td>
+                <td>{{ movement.newOriginCity }}</td>
+                <td>{{ movement.newOriginName }}</td>
+                <td>{{ movement.newOriginPostalCode }}</td>
+                <td>{{ movement.newOriginPremId }}</td>
+                <td>{{ movement.newOriginState }}</td>
+                <td>{{ movement.newDestinationAddress }}</td>
+                <td>{{ movement.newDestinationCity }}</td>
+                <td>{{ movement.newDestinationName }}</td>
+                <td>{{ movement.newDestinationPostalCode }}</td>
+                <td>{{ movement.newDestinationPremId }}</td>
+                <td>{{ movement.newDestinationState }}</td>
+                <td>{{ movement.originLat }}</td>
+                <td>{{ movement.originLon }}</td>
+                <td>{{ movement.destinationLat }}</td>
+                <td>{{ movement.destinationLon }}</td>
+                <td>{{ movement.newNumItemsMoved }}</td>
+                <td>{{ movement.newShipmentsStartDate | date: 'yy-MM-dd' }}</td>
+                <td>
+                    <!-- Edit button, navigate to movement update page with movement id -->
+                    <button class="btn btn-warning" [routerLink]="['/movements/update', movement.id]">Edit</button>
+
+                    <!-- Delete button, confirm before deleting and then call confirmDelete method -->
+                    <button class="btn btn-danger" (click)="confirmDelete(movement.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Create Movement button at the bottom -->
+    <button class="btn btn-success mt-2" [routerLink]="['/movements/create']">Create Movement</button>
+</div>
+</div>
+</body>

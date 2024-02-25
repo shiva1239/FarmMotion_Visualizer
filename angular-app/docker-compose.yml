@@ -1,0 +1,11 @@
+version: '3.5'
+services:
+  angular-service:
+    container_name: farmvisualizer1
+    build: ./
+    volumes: 
+      - './:/usr/src/app'
+    ports:
+      - "4200:4200"  # Adjust the port as per your Angular app configuration
+    command: >
+      bash -c "npm start"

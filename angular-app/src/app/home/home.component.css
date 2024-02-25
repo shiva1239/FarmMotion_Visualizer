@@ -1,0 +1,70 @@
+/* styles.css or app.component.css */
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.wrapper {
+  background-image: url('/assets/background.png'); /* Use absolute path from the src folder */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  flex: 1; /* Use remaining vertical space */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+h1, h2, h2.section-heading {
+  color: #38077d; /* Lighter shade for h1, h2, and section-heading */
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Adjust the gap between buttons as needed */
+  margin-bottom: 20px; /* Add margin at the bottom of the button groups */
+}
+
+.btn {
+  width: 200px; /* Set a fixed width for buttons */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for the pop effect */
+}
+
+.btn:hover {
+  transform: scale(1.1); /* Scale up the button on hover */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Add a subtle box shadow for the pop effect */
+}
+
+.logout-container {
+  text-align: right;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+/* Additional styles for Visualize Animal Movements button */
+.btn-visualize {
+  background-color: #370889; /* Lighter shade for the Visualize button */
+  border-color: #91d5ff; /* Lighter shade for the border color */
+  margin-top: 30px; /* Adjust the top margin for the Visualize button */
+  transition: background-color 0.3s ease; /* Smooth transition for button color */
+}
+
+.btn-visualize:hover {
+  background-color: #713ed7; /* Darker shade on hover for the Visualize button */
+  transform: scale(1.1); /* Scale up the button on hover */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Add a subtle box shadow for the pop effect */
+}
