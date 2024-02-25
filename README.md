@@ -33,6 +33,7 @@ FarmMotion Visualizer is an interactive application designed to visually represe
    
 4. **Animal Movement Animation:**
    - Main feature accessible from the home page.
+   - Ensure CSV File is loaded to execute this feature. 
    - Clicking the "Show Animal Movement" button leads to the animation page.
    
 5. **Animation Page:**
