@@ -1,20 +1,24 @@
+<!-- farm.create.html -->
+<body>
+  <div class="wrapper">
 <div class="container">
-    <h2>Create Farm</h2>
-    <form #farmForm="ngForm" (ngSubmit)="createFarm()">
-      <!-- Add your input fields with ngModel and name attributes -->
-      <div class="form-group">
-        <label for="premiseId">Premise ID:</label>
-        <input type="text" class="form-control" id="premiseId" name="premiseId" [(ngModel)]="newFarm.premiseId" required>
-      </div>
-  
-      <div class="form-group">
-        <label for="totalAnimal">Total Animals:</label>
-        <input type="number" class="form-control" id="totalAnimal" name="totalAnimal" [(ngModel)]="newFarm.totalAnimal" required>
-      </div>
-  
-      <!-- Add other input fields based on your Farm model -->
-  
-      <button type="submit" class="btn btn-primary">Create Farm</button>
-    </form>
+  <h2>Create Farm</h2>
+  <form #farmForm="ngForm" (ngSubmit)="createFarm()" class="farm-form">
+    <!-- Add your input fields with ngModel and name attributes -->
+    <div class="form-group">
+      <label for="premiseId">Premise ID:</label>
+      <input type="text" class="form-control" id="premiseId" name="premiseId" [(ngModel)]="newFarm.premiseId" required>
+    </div>
+
+    <div class="form-group">
+      <label for="totalAnimal">Total Animals:</label>
+      <input type="number" class="form-control" id="totalAnimal" name="totalAnimal" [(ngModel)]="newFarm.totalAnimal" required>
+    </div>
+
+    <!-- Add other input fields based on your Farm model -->
+
+    <button type="submit" class="btn btn-primary">Create Farm</button>
+  </form>
+</div>
   </div>
-  
+  </body>
