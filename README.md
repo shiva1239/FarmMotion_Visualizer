@@ -1,8 +1,8 @@
-# Welcome to FarmMotion Visualizer
+# FarmMotion Visualizer
 
 ## Overview
 
-FarmMotion Visualiser is an interactive application designed to provide a visual representation of animal movements between farms. Built with Angular for the frontend, Spring Boot for the backend, and Postgres as the database.
+FarmMotion Visualizer is an interactive application designed to visually represent animal movements between farms. The application is built with Angular for the frontend, Spring Boot for the backend, and Postgres as the database.
 
 ## Features
 
@@ -11,6 +11,14 @@ FarmMotion Visualiser is an interactive application designed to provide a visual
 - **Data Loaders for CSV Files:** Convenient upload components for movement and population data.
 - **Data Import:** Well-normalized schema for efficient storage of imported data.
 - **UI Controls:** Intuitive user interface to manage all components seamlessly.
+
+
+## Tech Stack
+
+- **Frontend:** Angular
+- **Backend:** Spring Boot
+- **Database:** Postgres
+
 
 ## Design
 
@@ -32,8 +40,29 @@ FarmMotion Visualiser is an interactive application designed to provide a visual
    - Utilizes OpenCage API for fictional animal movement visualization.
    - Displays movement between origin and destination farms using latitude and longitude coordinates.
 
-## Tech Stack
+## Getting Started
 
-- **Frontend:** Angular
-- **Backend:** Spring Boot
-- **Database:** Postgres
+Follow these steps to set up and run FarmMotion Visualizer, which consists of Angular for the frontend and Spring Boot for the backend.
+
+1. **Clone the Repository:**
+   - Clone the FarmMotion Visualizer repository to your local machine.
+
+2. **Navigate to Angular and Spring Boot Directories:**
+   - Open two separate terminals.
+   - In one terminal, navigate to the `angular-app` directory.
+   - In the other terminal, navigate to the `spring-boot-app` directory.
+
+3. **Follow Setup Instructions:**
+   - Inside each directory, follow the specific setup instructions for Angular and Spring Boot components.
+
+4. **Run Docker Compose:**
+   - In each terminal, run the command `docker-compose up`.
+   - This will start the containers for Angular and Spring Boot.
+
+5. **Access the Application:**
+   - Once the containers are up and running, open your browser and navigate to the Angular application link.
+   - This will direct you to the login page of FarmMotion Visualizer.
+
+Now you're ready to explore the features of FarmMotion Visualizer!
+
+
