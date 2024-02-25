@@ -1,27 +1,39 @@
-# Angulardemo
+# Welcome to FarmMotion Visualizer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+## Overview
 
-## Development server
+FarmMotion Visualiser is an interactive application designed to provide a visual representation of animal movements between farms. Built with Angular for the frontend, Spring Boot for the backend, and Postgres as the database.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **User Authentication:** Secure login and registration for users.
+- **Animal Movement Animation:** Engaging visualization of fictional animal movements.
+- **Data Loaders for CSV Files:** Convenient upload components for movement and population data.
+- **Data Import:** Well-normalized schema for efficient storage of imported data.
+- **UI Controls:** Intuitive user interface to manage all components seamlessly.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Design
 
-## Build
+1. **Login and Registration:**
+   - Existing users can log in, while new users need to register.
+   
+2. **Home Page:**
+   - Central hub for users after authentication.
+   - Option to upload CSV files redirects to separate components for movement and population data.
+   
+3. **Data Import:**
+   - Well-normalized tables showcase the imported data.
+   
+4. **Animal Movement Animation:**
+   - Main feature accessible from the home page.
+   - Clicking the "Show Animal Movement" button leads to the animation page.
+   
+5. **Animation Page:**
+   - Utilizes OpenCage API for fictional animal movement visualization.
+   - Displays movement between origin and destination farms using latitude and longitude coordinates.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Tech Stack
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- **Frontend:** Angular
+- **Backend:** Spring Boot
+- **Database:** Postgres
