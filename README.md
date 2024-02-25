@@ -19,7 +19,6 @@ FarmMotion Visualizer is an interactive application designed to visually represe
 - **Backend:** Spring Boot
 - **Database:** Postgres
 
-
 ## Design
 
 1. **Login and Registration:**
@@ -39,6 +38,36 @@ FarmMotion Visualizer is an interactive application designed to visually represe
 5. **Animation Page:**
    - Utilizes OpenCage API for fictional animal movement visualization.
    - Displays movement between origin and destination farms using latitude and longitude coordinates.
+
+
+### Login Page
+![Login Page](Images/login.png)
+*Description: This is the login page where existing users can log in.*
+
+### Register Page
+![Register Page](Images/register.png)
+*Description: New users can register on this page to create an account.*
+
+### Home Page
+![Home Page](Images/home.png)
+*Description: The main page of the application where users can navigate to different features.*
+
+### CSV Upload
+![CSV Upload](Images/csvupload.png)
+*Description: Page to upload CSV files for movement and population data.*
+
+### Movement Data
+![Movement Data](Images/Movement_Data.png)
+*Description: Well-normalized representation of imported movement data.*
+
+### Population Data
+![Population Data](Images/Population_Data.png)
+*Description: Well-normalized representation of imported population data.*
+
+### Animal Animation
+![Animal Animation](Images/Animal_Animation.png)
+*Description: Animation page showing fictional movement of animals between farms.*
+
 
 ## Getting Started
 
