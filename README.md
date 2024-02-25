@@ -4,6 +4,10 @@
 
 FarmMotion Visualizer is an interactive application designed to visually represent animal movements between farms. The application is built with Angular for the frontend, Spring Boot for the backend, and Postgres as the database.
 
+### Animal Animation
+![Animal Animation](Images/Animal_Animation.gif)
+*Animation page showing fictional movement of all pigs between two farms*
+
 ## Features
 
 - **User Authentication:** Secure login and registration for users.
@@ -43,31 +47,31 @@ FarmMotion Visualizer is an interactive application designed to visually represe
 
 ### Login Page
 ![Login Page](Images/login.png)
-*Description: This is the login page where existing users can log in.*
+*This is the login page where existing users can log in.*
 
 ### Register Page
 ![Register Page](Images/register.png)
-*Description: New users can register on this page to create an account.*
+*New users can register on this page to create an account.*
 
 ### Home Page
 ![Home Page](Images/home.png)
-*Description: The main page of the application where users can navigate to different features.*
+*The main page of the application where users can navigate to different features.*
 
 ### CSV Upload
 ![CSV Upload](Images/csvupload.png)
-*Description: Page to upload CSV files for movement and population data.*
+*Page to upload CSV files for movement and population data.*
 
 ### Movement Data
 ![Movement Data](Images/Movement_Data.png)
-*Description: Well-normalized representation of imported movement data.*
+*Well-normalized representation of imported movement data.*
 
 ### Population Data
 ![Population Data](Images/Population_Data.png)
-*Description: Well-normalized representation of imported population data.*
+*Well-normalized representation of imported population data.*
 
 ### Animal Animation
 ![Animal Animation](Images/Animal_Animation.png)
-*Description: Animation page showing fictional movement of animals between farms.*
+*Animation page showing fictional movement of animals between farms.*
 
 
 ## Getting Started
